@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+    /* Styling the body */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Styling section, giving background
+            image and dimensions */
+    section {
+      width: 100%;
+      height: 100vh;
+      background:
+        url('https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/2022/06/01193650/EDCLV2022_0622_014613-4300_ALEXVARSA-scaled.jpg');
+      background-size: auto;
+      opacity: 0.85;
+    }
+
+    /* Styling the left floating section */
+    section .leftBox {
+      width: 50%;
+      height: 100%;
+      float: left;
+      padding: 50px;
+      box-sizing: border-box;
+    }
+
+    /* Styling the background of
+            left floating section */
+    section .leftBox .content {
+      color: rgba(255, 255, 255, 0.836);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      transition: .5s;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    /* Styling the hover effect 
+            of left floating section */
+    section .leftBox .content:hover {
+      background: #e91e63;
+    }
+
+    /* Styling the header of left
+            floating section */
+    section .leftBox .content h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      text-transform: uppercase;
+      font-family: "Rajdhani", sans-serif;
+      font-weight: 700;
+    }
+
+    /* Styling the paragraph of
+            left floating section */
+    section .leftBox .content p {
+      margin: 10px 0 0;
+      padding: 0;
+      font-family: "Rajdhani", sans-serif;
+      font-weight: 500;
+      opacity: 1.5;
+    }
+
+    /* Styling the five events section */
+    section .events {
+      position: relative;
+      width: 45%;
+      height: 969px;
+      background: rgba(0, 0, 0, 0.5);
+      float: right;
+      box-sizing: border-box;
+      font-family: "Rajdhani", sans-serif;
+      font-weight: 500;
+    }
+
+    /* Styling the links of
+        the events section */
+    section .events ul {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+      padding-right: 40px;
+      padding-bottom: 0px;
+      box-sizing: border-box;
+    }
+
+    /* Styling the lists of the event section */
+    section .events ul li {
+      list-style: none;
+      background: #fff;
+      box-sizing: border-box;
+      height: 175px;
+      margin: 15px 0;
+    }
+
+    /* Styling the time class of events section */
+    section .events ul li .time {
+      position: relative;
+      padding: 20px;
+      background: #262626;
+      box-sizing: border-box;
+      width: 30%;
+      height: 100%;
+      float: left;
+      text-align: center;
+      transition: .5s;
+    }
+
+    /* Styling the hover effect
+            of events section */
+    section .events ul li:hover .time {
+      background: #e91e63;
+    }
+
+    /* Styling the header of time
+            class of events section */
+    section .events ul li .time h2 {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 60px;
+      line-height: 30px;
+    }
+
+    /* Styling the texts of time
+        class of events section */
+    section .events ul li .time h2 span {
+      font-size: 30px;
+    }
+
+    /* Styling the details
+        class of events section */
+    section .events ul li .details {
+      padding: 20px;
+      background: #fff;
+      box-sizing: border-box;
+      width: 70%;
+      height: 100%;
+      float: left;
+    }
+
+    /* Styling the header of the
+        details class of events section */
+    section .events ul li .details h3 {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      font-size: 22px;
+    }
+
+    /* Styling the lists of details
+        class of events section */
+    section .events ul li .details p {
+      position: relative;
+      margin: 10px 0 0;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    /* Styling the links of details
+        class of events section */
+    section .events ul li .details a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 15px;
+      border: 1.5px solid #262626;
+      margin-top: 8px;
+      font-size: 18px;
+      transition: .5s;
+    }
+
+    /* Styling the details class's hover effect */
+    section .events ul li .details a:hover {
+      background: #e91e63;
+      color: #fff;
+      border-color: #e91e63;
+    }
+
+    section .myBox {
+      border: none;
+      padding: 0px;
+      font: 15px/15px "Rajdhani", sans-serif;
+      font-weight: 500;
+      width: 508px;
+      height: 50px;
+      overflow: scroll;
+    }
+
+    /* Scrollbar styles */
+    ::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #e91e63;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: yellowgreen;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #88ba1c;
+    }
+
+    .example1 {
+      height: 50px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .example1 h3 {
+      font-size: 3em;
+      font-family: "Rajdhani", sans-serif;
+      color: #fff;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      line-height: 50px;
+      text-align: center;
+      /* Starting position */
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      /* Apply animation to this element */
+      -moz-animation: example1 15s linear infinite;
+      -webkit-animation: example1 15s linear infinite;
+      animation: example1 15s linear infinite;
+    }
+
+    /* Move it (define the animation) */
+    @-moz-keyframes example1 {
+      0% {
+        -moz-transform: translateX(100%);
+      }
+
+      100% {
+        -moz-transform: translateX(-100%);
+      }
+    }
+
+    @-webkit-keyframes example1 {
+      0% {
+        -webkit-transform: translateX(100%);
+      }
+
+      100% {
+        -webkit-transform: translateX(-100%);
+      }
+    }
+
+    @keyframes example1 {
+      0% {
+        -moz-transform: translateX(100%);
+        /* Firefox bug fix */
+        -webkit-transform: translateX(100%);
+        /* Firefox bug fix */
+        transform: translateX(100%);
+      }
+
+      100% {
+        -moz-transform: translateX(-100%);
+        /* Firefox bug fix */
+        -webkit-transform: translateX(-100%);
+        /* Firefox bug fix */
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="leftBox">
+      <div class="content">
+        <h1>
+          EDC Las Vegas Weekend
+        </h1>
+
+        <p>The greatest weekend of our lives is quickly approaching!</p>
+        <p>We want to make sure we have our weekend well planned.</p>
+        <p>All information pertaining to EDC Weekend will be located here.</p>
+        <p>Sit back, relax and get ready to PLURR <span style='font: size 15px;'>&#10024;</span></p>
+        <p> </p>
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/1jLL7Uy3NGtuWmOIM1PNzc?utm_source=generator" width="100%"
+          height="80" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="example1">
+          <h3>See you at EDC <span style='font-size:35px;'>&#128526;</span></h3>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="events">
+      <ul>
+        <li>
+          <div class="time">
+            <h2>
+              18 <br><span>May</span>
+            </h2>
+          </div>
+          <div class="details">
+            <h3>
+              Whos Jet Setting and When?<span style='font-size:20px;'>&#128641;</span>
+            </h3>
+
+            <p>
+            <div class="myBox">
+              Lydia, Eli, Leslie & Corbin all fly in on
+              Thursday May 18th, 2023 at 12:30PM at San Diego Internation Airport. Bailee will pick us all
+              up and then we will drive directly to Las Vegas and check into Circus Circus Hotel.
+            </div>
+            </p>
+
+
+            <a href="https://baileegene.github.io/SampleSite/website.html" target=”_blank”>Hotel Details</a>
+          </div>
+          <div style="clear: both;"></div>
+        </li>
+
+        <li>
+          <div class="time">
+            <h2>
+              19 <br><span>May</span>
+            </h2>
+          </div>
+          <div class="details">
+            <h3>
+              Whats the line up yall?<span style='font-size:20px;'>&#127752;</span>
+            </h3>
+
+            <p>
+              EDC Las Vegas is projected to release the line up for all artist in Spring 2023,
+              it is assumed that will be mid to late march.
+            </p>
+
+            <a href="https://www.edcweek.com/">EDC Week Details</a>
+          </div>
+          <div style="clear:both;"></div>
+        </li>
+
+        <li>
+          <div class="time">
+            <h2>
+              20 <br><span>May</span>
+            </h2>
+          </div>
+          <div class="details">
+            <h3>
+              Where is the event happening?
+            </h3>
+
+            <p>
+
+            </p>
+
+
+            <a href="#">View Details</a>
+          </div>
+          <div style="clear:both;"></div>
+        </li>
+        <li>
+          <div class="time">
+            <h2>
+              21 <br><span>May</span>
+            </h2>
+          </div>
+          <div class="details">
+            <h3>
+              Where is the event happening?
+            </h3>
+
+            <p>
+
+            </p>
+
+            <a href="#">View Details</a>
+          </div>
+          <div style="clear:both;"></div>
+        </li>
+        <li>
+          <div class="time">
+            <h2>
+              22 <br><span>May</span>
+            </h2>
+          </div>
+          <div class="details">
+            <h3>
+              Where is the event happening?
+            </h3>
+
+            <p>
+
+            </p>
+
+            <a href="#">View Details</a>
+          </div>
+          <div style="clear:both;"></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</body>
+
+</html>

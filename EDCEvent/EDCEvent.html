@@ -70,7 +70,7 @@
             opacity: 1.5;
         }
 
-        /* Styling the three events section */
+        /* Styling the five events section */
         section .events {
             position: relative;
             width: 50%;
@@ -78,6 +78,8 @@
             background: rgba(0, 0, 0, 0.5);
             float: right;
             box-sizing: border-box;
+            font-family: "Rajdhani", sans-serif;
+            font-weight: 500;
         }
 
         /* Styling the links of
@@ -186,6 +188,100 @@
             color: #fff;
             border-color: #e91e63;
         }
+
+        section .myBox {
+            border: none;
+            padding: 5px;
+            font: 20px/20px "Rajdhani", sans-serif;
+            width: 225px;
+            height: 50px;
+            overflow: scroll;
+        }
+
+        /* Scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #e91e63;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: yellowgreen;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #88ba1c;
+        }
+
+        .example1 {
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .example1 h3 {
+            font-size: 3em;
+            font-family: "Rajdhani", sans-serif;
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            /* Starting position */
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            /* Apply animation to this element */
+            -moz-animation: example1 15s linear infinite;
+            -webkit-animation: example1 15s linear infinite;
+            animation: example1 15s linear infinite;
+        }
+
+        /* Move it (define the animation) */
+        @-moz-keyframes example1 {
+            0% {
+                -moz-transform: translateX(100%);
+            }
+
+            100% {
+                -moz-transform: translateX(-100%);
+            }
+        }
+
+        @-webkit-keyframes example1 {
+            0% {
+                -webkit-transform: translateX(100%);
+            }
+
+            100% {
+                -webkit-transform: translateX(-100%);
+            }
+        }
+
+        @keyframes example1 {
+            0% {
+                -moz-transform: translateX(100%);
+                /* Firefox bug fix */
+                -webkit-transform: translateX(100%);
+                /* Firefox bug fix */
+                transform: translateX(100%);
+            }
+
+            100% {
+                -moz-transform: translateX(-100%);
+                /* Firefox bug fix */
+                -webkit-transform: translateX(-100%);
+                /* Firefox bug fix */
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 
@@ -207,6 +303,10 @@
                     width="100%" height="80" frameBorder="0" allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"></iframe>
+                <div class="example1">
+                    <h3>See you at EDC <span style='font-size:35px;'>&#128526;</span></h3>
+                </div>
+
 
             </div>
         </div>
@@ -221,18 +321,19 @@
                     </div>
                     <div class="details">
                         <h3>
-                            Whos Jet Setting and When?
+                            Whos Jet Setting and When?<span style='font-size:20px;'>&#128641;</span>
                         </h3>
 
                         <p>
+                        <textarea rows="5" cols="20" style="overflow:hidden;">
                             Lydia, Eli, Leslie & Corbin all fly in on
                             Thursday May 18th, 2023 at 12:30PM at San Diego Internation Airport. Bailee will pick us all
-                            up and then we will drive directly to Las Vegas and check into Circus Circus Hotel.
+                            up and then we will drive directly to Las Vegas and check into Circus Circus Hotel. 
+                            </textarea>
                         </p>
 
 
-                        <a href="https://baileegene.github.io/SampleSite/website.html"
-                            target=”_blank”>Hotel Details</a>
+                        <a href="https://baileegene.github.io/SampleSite/website.html" target=”_blank”>Hotel Details</a>
                     </div>
                     <div style="clear: both;"></div>
                 </li>
@@ -240,26 +341,20 @@
                 <li>
                     <div class="time">
                         <h2>
-                            27 <br><span>May</span>
+                            19 <br><span>May</span>
                         </h2>
                     </div>
                     <div class="details">
                         <h3>
-                            Where is the event happening?
+                            Whats the line up yall?<span style='font-size:20px;'>&#127752;</span>
                         </h3>
 
                         <p>
-                            With the idea of imparting programming
-                            knowledge, Mr. Sandeep Jain, an IIT
-                            Roorkee alumnus started a dream,
-                            GeeksforGeeks. Whether programming
-                            excites you or you feel stifled,
-                            how to ace data structures and
-                            algorithms, GeeksforGeeks is a
-                            one-stop solution.
+                            EDC Las Vegas is projected to release the line up for all artist in Spring 2023,
+                            it is assumed that will be mid to late march.
                         </p>
 
-                        <a href="#">View Details</a>
+                        <a href="https://www.edcweek.com/">EDC Week Details</a>
                     </div>
                     <div style="clear:both;"></div>
                 </li>
@@ -267,7 +362,7 @@
                 <li>
                     <div class="time">
                         <h2>
-                            12 <br><span>August</span>
+                            20 <br><span>May</span>
                         </h2>
                     </div>
                     <div class="details">
@@ -276,14 +371,7 @@
                         </h3>
 
                         <p>
-                            With the idea of imparting programming
-                            knowledge, Mr. Sandeep Jain, an IIT
-                            Roorkee alumnus started a dream,
-                            GeeksforGeeks. Whether programming
-                            excites you or you feel stifled,
-                            how to ace data structures and
-                            algorithms, GeeksforGeeks is a
-                            one-stop solution.
+
                         </p>
 
 
@@ -294,7 +382,7 @@
                 <li>
                     <div class="time">
                         <h2>
-                            27 <br><span>May</span>
+                            21 <br><span>May</span>
                         </h2>
                     </div>
                     <div class="details">
@@ -303,14 +391,7 @@
                         </h3>
 
                         <p>
-                            With the idea of imparting programming
-                            knowledge, Mr. Sandeep Jain, an IIT
-                            Roorkee alumnus started a dream,
-                            GeeksforGeeks. Whether programming
-                            excites you or you feel stifled,
-                            how to ace data structures and
-                            algorithms, GeeksforGeeks is a
-                            one-stop solution.
+
                         </p>
 
                         <a href="#">View Details</a>
@@ -320,7 +401,7 @@
                 <li>
                     <div class="time">
                         <h2>
-                            27 <br><span>May</span>
+                            22 <br><span>May</span>
                         </h2>
                     </div>
                     <div class="details">
@@ -329,14 +410,7 @@
                         </h3>
 
                         <p>
-                            With the idea of imparting programming
-                            knowledge, Mr. Sandeep Jain, an IIT
-                            Roorkee alumnus started a dream,
-                            GeeksforGeeks. Whether programming
-                            excites you or you feel stifled,
-                            how to ace data structures and
-                            algorithms, GeeksforGeeks is a
-                            one-stop solution.
+
                         </p>
 
                         <a href="#">View Details</a>
